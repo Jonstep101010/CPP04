@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <string>
 
 class Animal {
@@ -17,5 +16,3 @@ public:
 private:
 	std::string type;
 };
-
-std::ostream& operator<<(std::ostream& o, Animal const& i);
