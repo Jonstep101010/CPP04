@@ -1,4 +1,5 @@
 #include "Cat.hpp"
+#include <iostream>
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -20,16 +21,10 @@ Cat::~Cat() {}
 */
 
 Cat& Cat::operator=(Cat const& rhs) {
-	//if ( this != &rhs )
-	//{
-	//this->_value = rhs.getValue();
-	//}
+	if (this != &rhs) {
+		Animal::operator=(rhs);
+	}
 	return *this;
-}
-
-std::ostream& operator<<(std::ostream& o, Cat const& i) {
-	//o << "Value = " << i.getValue();
-	return o;
 }
 
 /*

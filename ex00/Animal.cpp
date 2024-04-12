@@ -1,4 +1,5 @@
 #include "Animal.hpp"
+#include <iostream>
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -40,8 +41,14 @@ Animal& Animal::operator=(Animal const& rhs) {
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void Animal::makeSound() const {
+	std::cout << "Animal sound!\n";
+}
+
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
+
+std::string Animal::getType() const { return this->type; }
 
 /* ************************************************************************** */

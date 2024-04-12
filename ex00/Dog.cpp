@@ -1,4 +1,5 @@
 #include "Dog.hpp"
+#include <iostream>
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -7,36 +8,30 @@
 Dog::Dog()
 	: Animal("Dog") {}
 
-Dog::Dog(const Dog& src) {}
+Dog::Dog(const Dog& src) { *this = src; }
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Dog::~Dog() {}
+Dog::~Dog() { std::cout << "Dog destructor called\n"; }
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
 Dog& Dog::operator=(Dog const& rhs) {
-	//if ( this != &rhs )
-	//{
-	//this->_value = rhs.getValue();
-	//}
+	if (this != &rhs) {
+		Animal::operator=(rhs);
+	}
 	return *this;
-}
-
-std::ostream& operator<<(std::ostream& o, Dog const& i) {
-	//o << "Value = " << i.getValue();
-	return o;
 }
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void Dog::makeSound() { std::cout << "Woof!\n"; }
+void Dog::makeSound() const { std::cout << "Woof!\n"; }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
