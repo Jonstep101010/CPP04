@@ -6,7 +6,7 @@
 
 Brain::Brain() {}
 
-Brain::Brain(const Brain& src) {}
+Brain::Brain(const Brain& src) { *this = src; }
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -19,16 +19,10 @@ Brain::~Brain() {}
 */
 
 Brain& Brain::operator=(Brain const& rhs) {
-	//if ( this != &rhs )
-	//{
-	//this->_value = rhs.getValue();
-	//}
+	if (this != &rhs) {
+		(void)rhs;
+	}
 	return *this;
-}
-
-std::ostream& operator<<(std::ostream& o, Brain const& i) {
-	//o << "Value = " << i.getValue();
-	return o;
 }
 
 /*
