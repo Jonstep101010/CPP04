@@ -38,6 +38,8 @@ WrongCat& WrongCat::operator=(WrongCat const& rhs) {
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void WrongCat::makeSound()  { std::cout << "WrongMeow!\n"; }
+
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
