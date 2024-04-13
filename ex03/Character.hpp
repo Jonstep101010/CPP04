@@ -10,12 +10,11 @@ class Character : public ICharacter {
 
 public:
 	std::string const& getName() const;
-	void               equip(AMateria*);
+	virtual void       equip(AMateria*);
 
-	// must not delete Materia
-	void unequip(int idx);
+	virtual void unequip(int idx);
 
-	void use(int idx, ICharacter& target);
+	virtual void use(int idx, ICharacter& target);
 	Character();
 	Character(std::string Name);
 	Character(Character const& src);
@@ -29,4 +28,8 @@ public:
 private:
 	AMateria*   inventory[SIZE_INVENTORY];
 	std::string Name;
+	AMateria**  unequipped;
+	int         unequippedSize;
+	int         unequippedCapacity;
+	void        addUnequipped(AMateria* target);
 };

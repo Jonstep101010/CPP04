@@ -4,7 +4,6 @@
 #include <string>
 
 class ICharacter;
-class Character;
 
 class AMateria {
 
@@ -22,5 +21,6 @@ public:
 
 	AMateria& operator=(AMateria const& rhs);
 
-private:
+protected:
+	std::string type;
 };

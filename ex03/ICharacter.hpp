@@ -16,11 +16,4 @@ public:
 	virtual void unequip(int idx)                 = 0;
 
 	virtual void use(int idx, ICharacter& target) = 0;
-	ICharacter();
-	ICharacter(ICharacter const& src);
-
-	ICharacter& operator=(ICharacter const& rhs);
-
-private:
-	// hold templates
 };

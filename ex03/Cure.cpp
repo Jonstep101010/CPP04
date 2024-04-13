@@ -1,4 +1,6 @@
 #include "Cure.hpp"
+#include <iostream>
+#include <string>
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------

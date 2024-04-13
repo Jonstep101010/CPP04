@@ -1,7 +1,7 @@
 #pragma once
 
+#include "AMateria.hpp"
 #include "IMateriaSource.hpp"
-#include <iostream>
 #include <string>
 
 class MateriaSource : public IMateriaSource {
@@ -17,4 +17,5 @@ public:
 	virtual AMateria* createMateria(std::string const& type);
 
 private:
+	AMateria* source_inventory[4];
 };
