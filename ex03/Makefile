@@ -1,6 +1,6 @@
 NAME = AMateria
 
-SRC = MateriaSource.cpp Ice.cpp Cure.cpp Character.cpp Amateria.cpp main.cpp
+SRC = MateriaSource.cpp Ice.cpp Cure.cpp Character.cpp AMateria.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
