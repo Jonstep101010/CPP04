@@ -54,5 +54,8 @@ int main() {
 	delete heap_dog2;
 	delete heap_dog3;
 
+	// make sure animal is abstract
+	// Animal a;
+
 	return 0;
 }
