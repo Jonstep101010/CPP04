@@ -1,4 +1,5 @@
 #include "Dog.hpp"
+#include "Brain.hpp"
 #include <iostream>
 
 /*
@@ -6,15 +7,23 @@
 */
 
 Dog::Dog()
-	: Animal("Dog") {}
+	: Animal("Dog"), brain(new Brain()) {
+	std::cout << "Dog default constructor called\n";
+}
 
-Dog::Dog(const Dog& src) { *this = src; }
+Dog::Dog(const Dog& src) {
+	std::cout << "Cat copy constructor called\n";
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Dog::~Dog() { std::cout << "Dog destructor called\n"; }
+Dog::~Dog() {
+	delete brain;
+	std::cout << "Dog destructor called\n";
+}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------

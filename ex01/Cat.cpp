@@ -6,15 +6,21 @@
 */
 
 Cat::Cat()
-	: Animal("Cat") {}
+	: Animal("Cat"), brain(new Brain()) {}
 
-Cat::Cat(const Cat& src) { *this = src; }
+Cat::Cat(const Cat& src) {
+	std::cout << "Cat copy constructor called\n";
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Cat::~Cat() {}
+Cat::~Cat() {
+	delete brain;
+	std::cout << "Cat destructor called\n";
+}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
