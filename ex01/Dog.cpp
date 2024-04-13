@@ -11,8 +11,9 @@ Dog::Dog()
 	std::cout << "Dog default constructor called\n";
 }
 
-Dog::Dog(const Dog& src) : brain() {
-	std::cout << "Cat copy constructor called\n";
+Dog::Dog(const Dog& src)
+	: brain() {
+	std::cout << "Dog copy constructor called\n";
 	*this = src;
 }
 
