@@ -8,7 +8,10 @@
 Cat::Cat()
 	: Animal("Cat") {}
 
-Cat::Cat(const Cat& src) { *this = src; }
+Cat::Cat(const Cat& src)
+	: Animal("Cat") {
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------

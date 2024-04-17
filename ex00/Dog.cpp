@@ -8,7 +8,10 @@
 Dog::Dog()
 	: Animal("Dog") {}
 
-Dog::Dog(const Dog& src) { *this = src; }
+Dog::Dog(const Dog& src)
+	: Animal("Dog") {
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
