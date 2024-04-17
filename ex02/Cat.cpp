@@ -6,7 +6,9 @@
 */
 
 Cat::Cat()
-	: Animal("Cat"), brain(new Brain()) {}
+	: Animal("Cat"), brain(new Brain()) {
+	std::cout << "Cat default constructor called\n";
+}
 
 Cat::Cat(const Cat& src)
 	: Animal("Cat"), brain() {

@@ -14,6 +14,6 @@ public:
 	virtual void makeSound() const = 0;
 	std::string  getType() const;
 
-private:
+protected:
 	std::string type;
 };

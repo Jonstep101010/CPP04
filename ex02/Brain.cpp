@@ -4,15 +4,20 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Brain::Brain() {}
+Brain::Brain() {
+	std::cout << "Brain default constructor called\n";
+}
 
-Brain::Brain(const Brain& src) { *this = src; }
+Brain::Brain(const Brain& src) {
+	std::cout << "Brain copy constructor called\n";
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Brain::~Brain() {}
+Brain::~Brain() { std::cout << "Brain destructor called\n"; }
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
