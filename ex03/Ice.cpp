@@ -8,7 +8,10 @@
 Ice::Ice()
 	: AMateria("ice") {}
 
-Ice::Ice(const Ice& src) { *this = src; }
+Ice::Ice(const Ice& src)
+	: AMateria("ice") {
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------

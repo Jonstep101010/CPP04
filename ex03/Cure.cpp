@@ -9,7 +9,10 @@
 Cure::Cure()
 	: AMateria("cure") {}
 
-Cure::Cure(const Cure& src) { *this = src; }
+Cure::Cure(const Cure& src)
+	: AMateria("cure") {
+	*this = src;
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
