@@ -12,7 +12,7 @@ Dog::Dog()
 }
 
 Dog::Dog(const Dog& src)
-	: brain() {
+	: Animal("Dog"), brain() {
 	std::cout << "Dog copy constructor called\n";
 	*this = src;
 }
