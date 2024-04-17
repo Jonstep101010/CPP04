@@ -6,10 +6,13 @@
 */
 
 Cat::Cat()
-	: Animal("Cat") {}
+	: Animal("Cat") {
+	std::cout << "Cat default constructor called\n";
+}
 
 Cat::Cat(const Cat& src)
 	: Animal("Cat") {
+	std::cout << "Cat copy constructor called\n";
 	*this = src;
 }
 
@@ -17,7 +20,7 @@ Cat::Cat(const Cat& src)
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Cat::~Cat() {}
+Cat::~Cat() { std::cout << "Cat destructor called\n"; }
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------

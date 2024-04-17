@@ -6,10 +6,13 @@
 */
 
 Dog::Dog()
-	: Animal("Dog") {}
+	: Animal("Dog") {
+	std::cout << "Dog default constructor called\n";
+}
 
 Dog::Dog(const Dog& src)
 	: Animal("Dog") {
+	std::cout << "Dog copy constructor called\n";
 	*this = src;
 }
 
