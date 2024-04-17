@@ -11,7 +11,8 @@ MateriaSource::MateriaSource()
 	}
 }
 
-MateriaSource::MateriaSource(const MateriaSource& src) : source_inventory() {
+MateriaSource::MateriaSource(const MateriaSource& src)
+	: source_inventory() {
 	*this = src;
 }
 
